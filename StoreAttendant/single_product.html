@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Single Products | Store Manager</title>
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- Javascript action links -->
+    <script src="../js/js_actions.js"></script>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <div class="header_title">
+                <div class="company_title">
+                    <a href="home.html">Electronics Store Manager</a>
+                </div> 
+                <div class="menu">
+                    <ul>
+                        <li><a href="home.html">Products</a></li>
+                       | <li><a href="sale_records.html">Sale Records</a></li>
+                       | <li><a href="my_profile.html">My Profile</a></li>
+                       | <li><a href="logout.html">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main_body">
+            <div class="body_wrapper">
+
+                <!-- Navigation bar for searching products and a cart button -->
+                <div class="search_bar">
+
+                    <!-- title of the current page will be displayed here -->
+                    <h2>
+                        <a href="products.html">
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </h2>
+                    <h3>Products</h3>
+
+                    <!-- A button to search for products -->
+                    <div class="search_form">
+                        <form action="" method="POST" enctype="multipart/form-data">
+                            <input type="text" name="search_product" placeholder="Seach Product" size="60">
+                            <input type="submit" name="submit_button" value="Search">
+                        </form>
+                    </div>
+
+                    <!-- A button to add products to cart and to checkout -->
+                    <div class="cart">
+                        <a href="attendant_cart.html">
+                            <button class="cart_button">
+                                <i class="fas fa-shopping-cart fa-2x"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <br><br><br>
+                <hr>
+                <!-- A body to display products to the user -->
+                <div class="products_category_wrapper">
+                    <!-- first product row -->
+                    <div class="products_category_row">
+                        <div class="single_product">
+                                <div class="single_product_image">
+                                    <img src="../images/laptop.png" alt="Single Product" width="340" height="347">
+                                </div>
+
+                                <!-- single product description -->
+                                <div class="single_product_description">
+                                    <h2>Product Description</h2>
+                                    <b>Product Category: </b> Office Computers
+                                    <br><br>
+                                    <b>Product Name: </b> HP Pavilion Desktops
+                                    <br><br>
+                                    <b>Quantity: </b> 12 Available
+                                    <br><br>
+                                    <b>Product Price: </b> Ksh. 100,000
+                                    <br><br>
+                                    <b>Product Features: </b> 
+                                    <ul>
+                                        <li>Windows 10 Home 64</li>
+                                        <li>7th Generation Intel Core i5 processor</li>
+                                        <li>AMD Radeon RX 460 (2 GB GDDR5 dedicated)</li>
+                                        <li>8 GB memory; 1 TB HDD storage</li>
+                                    </ul>
+                                    <button onclick="AddToCart()" class="add_to_cart_button">Add To Cart</button>
+                                </div>
+                        </div>
+                    </div>
+
+                   
+                </div>
+            </div>
+        </div> 
+        <div class="footer">
+            &copy; 2018 Store Manager
+        </div>
+    </div>
+</body>
+</html>
