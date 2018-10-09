@@ -6,13 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Store Manager</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <body>
     <div class="grid-container">
         <div class="header">
             <div class="header_title">
                 <div class="company_title">
-                    Store Manager
+                    Electronics Store Manager
                 </div> 
             </div>
         </div>
@@ -21,7 +24,7 @@
                 <center>
                     <div class="login">
                     <legend><h2>Login</h2></legend>
-                    <form action="StoreAttendant/home.html" method="POST" enctype="multipart/form-data">
+                    <form action="" method="POST" enctype="multipart/form-data">
                         <label for="username" class="form-label">Username</label><br/>
                         <input type="text" name="username" placeholder="e.g. Nicque">
                         <br/><br/>
@@ -31,8 +34,12 @@
                         <a href="forgot_password.html">Forgot Password</a>
                         <br>
                         <br/>
-                        <input type="submit" name="login" value="Login">
-                    </form>
+                        <!-- <input type="submit" name="login" value="Login"> -->
+                        </form>
+                        <div class="button_login">
+                            <a href="StoreAttendant/home.html"><button class="store_attendant_button">Attendant Login</button></a>
+                            <a href="StoreOwner/home.html"><button class="store_owner_button">Owner Login</button></a>
+                        </div>
                     </div>
                 </center>
             </div>
