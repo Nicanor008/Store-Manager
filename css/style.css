@@ -63,6 +63,10 @@
     float: left;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.company_title a{
+    text-decoration: none;
+    color: white;   
+}
 .menu{
     float: right;
 }
@@ -111,13 +115,6 @@
     border-radius: 2px;
     background-color: white;
 }
-/* .login input[type=submit]{
-    font-weight: bold;
-    color: #37474F;
-    font-size: 16px;
-    cursor: pointer;
-    width: 100%;
-} */
 .store_attendant_button{
     padding: 6px;
     font-weight: bold;
@@ -166,9 +163,17 @@
 .search_bar{
     width: 100%;
 }
+.search_bar h2{
+    float: left;
+    width: 3%;
+}
+.search_bar h2 a {
+    text-decoration: none;
+    color: #546E7A;
+}
 .search_bar h3{
     float: left;
-    width: 24%;
+    width: 22%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #546E7A;
 }
@@ -219,13 +224,16 @@
 }
 .single_product{
     width: 90%;
-    float: left;
     margin-left: 3%;
     margin-right: 3%;
 }
 .single_product_category a{
     text-decoration: none;
     color: black;
+}
+.single_product_image {
+    width: 40%;
+    float: left;
 }
 .product_image {
     width: 100%;
@@ -237,19 +245,123 @@
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.product_category_descr{
+    padding: 10px;
+    width: 74%;
+    background-color: #ECEFF1;
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 .product_category_description:hover{
     font-weight: bolder;
     cursor: pointer;
 }
-.single_image {
-    width: 100%;
-    padding: 2px;
-    float: left;
-}
 .single_product_description {
     float: left;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
+    padding-top: 5px;
+}
+
+/* add to cart button */
+.add_to_cart_button {
+    padding: 12px;
+    background-color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-weight: bolder;
+    font-size: 16px;
+    background-color: #546E7A;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* add to cart buttons in products page */
+.add_to_cart_buttons {
+    padding: 10px;
+    background-color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-weight: bolder;
+    font-size: 16px;
+    background-color: #546E7A;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.add_to_cart_btn button {
+    padding: 10px;
+    background-color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-weight: bolder;
+    font-size: 16px;
+    background-color: #1976D2;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Buyers cart */
+.buyers_cart_table table {
+    width: 95%;
+    align-self: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.buyers_cart_table table th {
+    text-align: left;
+}
+.buyers_cart_table table td {
+    padding-top: 10px;
+}
+.buyers_cart{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.buyers_cart_table button {
+    padding: 10px;
+    background-color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.buyers_cart_table th {
+    background-color: #ECEFF1;
+    padding: 4px;
+}
+
+/* Sale records table */
+.sale_records_table table {
+    width: 95%;
+    align-self: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.sale_records_table table th {
+    text-align: left;
+}
+.sale_records_table table td {
+    padding-top: 10px;
+}
+.buyers_cart{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.sale_records_table button {
+    padding: 6px 20px 6px 20px;
+    background-color: rgb(241, 40, 40);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-weight: bolder;
+    font-size: 17px;
+    cursor: pointer;
+}
+.sale_records_table th {
+    background-color: #ECEFF1;
+    padding: 4px;
 }
 .footer { 
     grid-area: footer;
