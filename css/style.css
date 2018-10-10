@@ -177,6 +177,22 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #546E7A;
 }
+.title_bar h3{
+    float: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #546E7A;
+}
+.title_bar button {
+    margin-left: 20px;
+    padding: 10px;
+    background-color: #90A4AE;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
 .search_form{
     width: 70%;
     float: left;
@@ -348,7 +364,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
-.sale_records_table button {
+.btn_delete {
     padding: 6px 20px 6px 20px;
     background-color: rgb(241, 40, 40);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -358,10 +374,51 @@
     font-weight: bolder;
     font-size: 17px;
     cursor: pointer;
+    border-radius: 6px;
+}
+.btn_edit {
+    padding: 6px 20px 6px 20px;
+    background-color: rgb(120, 146, 158);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-weight: bolder;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 6px;
 }
 .sale_records_table th {
     background-color: #ECEFF1;
     padding: 4px;
+}
+
+/* admins sales records view */
+.records_wrapper {
+    width: 100%;
+    margin-top: 20px;
+}
+.attendants_records {
+    float: left;
+    padding: 5px;
+    width: 17%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.attendants_records button {
+    padding: 6px;
+    margin-bottom: 8px;
+    background-color: white;
+    width: 120px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.total_records {
+    float: left;
+    padding: 20px;
+    width: 70%;
+}
+.total_sale_records_table {
+    width: 100%;
 }
 .footer { 
     grid-area: footer;
