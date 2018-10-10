@@ -48,6 +48,12 @@
     padding: 8px;
     margin-bottom: 10px;
 }
+.modal select {
+    padding: 8px;
+    margin-bottom: 4px;
+    background-color: white;
+    width: 530px;
+}
 .modal-header {
     padding-left: 15px;
     background-color: #FAFAFA;
