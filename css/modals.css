@@ -1,0 +1,62 @@
+/*  The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    border-radius: 10px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+    /* padding-bottom: 50px;
+    margin-bottom: 80px; */
+}
+.save {
+    color: #0512cf;
+    /* color: #7a7575; */
+    font-size: 28px;
+    font-weight: bold;
+    /* padding-bottom: 50px; */
+    margin-top: 15px;
+    /* background-color: rgb(47, 21, 161); */
+    border: 1px solid #0512cf;
+}
+.modal-body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.modal-body input {
+    padding: 8px;
+    margin-bottom: 10px;
+}
+.modal-header {
+    padding-left: 15px;
+    background-color: #FAFAFA;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 3px;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
