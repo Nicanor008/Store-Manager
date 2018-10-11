@@ -89,6 +89,12 @@
     font-size: 18px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.active {
+    /* background-color: rgb(149, 156, 161); */
+    color: white;
+    font-weight: bolder;
+    
+}
 .login{
     background-color: #546E7A;
     padding-top: 17px;
@@ -420,6 +426,31 @@
 .total_sale_records_table {
     width: 100%;
 }
+
+/* personal profile  */
+.profile_wrapper {
+    width: 100%;
+    margin-top: 12%;
+}
+.profile_contents {
+    width: 26%;
+    padding: 20px;
+    float: left;
+}
+.profile_icon i {
+    color: #546E7A;
+}
+.profile_icon h1 {
+    margin: 3px;
+    padding: 5px;
+    font-size: 53px;
+}
+.profile_description {
+    font-size: 27px;
+    color: #546E7A;
+}
+
+/* main footer of the page */
 .footer { 
     grid-area: footer;
     position: fixed;

@@ -19,3 +19,4 @@ function CancelCart() {
         window.open('home.html', '_SELF');
     }
 }
+
