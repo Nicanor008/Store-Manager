@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sale Records | Store Manager</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/modals.css">
+    
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- Javascript action links -->
+    <script src="../js/js_actions.js"></script>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <div class="header_title">
+                <div class="company_title">
+                    <a href="home.html">
+                        Electronics Store Manager
+                    </a>
+                </div> 
+                <div class="menu">
+                    <ul>
+                        <li><a href="home.html">Manage Products</a></li>
+                       | <li class="active"><a href="attendants.html">Manage Attendants</a></li>
+                       | <li><a href="sale_records.html">Sale Records</a></li>
+                       | <li><a href="../index.html">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main_body">
+            <div class="body_wrapper">
+
+                <!-- This will help users know where they are currently -->
+                <div class="title_bar">
+                    <h3>Manage Attendants</h3>
+                    <!-- Modal to be used to add Attendant -->
+                    <button id="myBtn">Add Attendant</button> 
+
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2>Add Store Attendant</h2>
+                        </div>
+                            <div class="modal-body">
+                                <br>
+                                <form action="" method="POST" enctype="application/x-www-form-urlencoded">
+                                    <label for="name">Full Names</label><br>
+                                    <input type="text" name="fullNames" placeholder="Store Attendant Full Names" size="62"><br>
+                                    <label for="username">Username</label><br>
+                                    <input type="text" name="username" placeholder="Username " size="62"><br>
+                                    <label for="email">Email</label><br>
+                                    <input type="email" name="email" placeholder="valid email" size="62"><br>
+                                    <label for="password">Set Password</label><br>
+                                    <input type="password" name="password" placeholder="Set a strong password" size="62"><br>
+                                    <label for="role">Role</label><br>
+                                    <input type="text" name="role" placeholder="Store Attendant Role" size="62"><br>
+                                    <label for="Privileges">Privileges</label><br>
+                                    <!-- <input type="text" name="Privileges" placeholder="Store Attendant Privileges" size="62"><br>
+                                     -->
+                                     <select name="privileges">
+                                         <option value="2">Store Attendant</option>
+                                         <option value="3">Store Attendant Admin</option>
+                                     </select>
+                                </form>
+                                    <center>
+                                        <button class="save">Add Attendant</button>
+                                        <button class="close">Close</button>
+                                    </center>
+                            </div>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <div class="products_category_wrapper">
+                    <div class="sale_records_table">
+                        <table>
+                            <tr>
+                                <th>Employee No.:</th>
+                                <th>Full Names</th>
+                                <th>Username</th>
+                                <th>Role</th>
+                                <th>Employement Date</th>
+                                <th>Action</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>2018/001</td>
+                                <td>Nicanor Korir</td>
+                                <td>NIcque</td>
+                                <td>Supervisor</td>
+                                <td>2018/01/01</td>
+                                <td>
+                                        <!-- Modal to be used to edit a product -->
+                                        <button class="btn_edit" style="color: white; background-color: rgb(120, 146, 158);">Edit</button>
+                                    </td>
+                                    <td>
+                                        <button class="btn_delete" style="background-color: rgb(241, 40, 40);color: white;">X</button>
+                                    </td>
+                            </tr>
+                            <tr>
+                                <td>2018/001</td>
+                                <td>Nicanor Korir</td>
+                                <td>NIcque</td>
+                                <td>Supervisor</td>
+                                <td>2018/01/01</td>
+                                <td>
+                                    <!-- Modal to be used to edit a product -->
+                                    <button class="btn_edit" style="color: white; background-color: rgb(120, 146, 158);">Edit</button>
+                                </td>
+                                <td>
+                                    <button class="btn_delete" style="background-color: rgb(241, 40, 40);color: white;">X</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2018/001</td>
+                                <td>Nicanor Korir</td>
+                                <td>NIcque</td>
+                                <td>Supervisor</td>
+                                <td>2018/01/01</td>
+                                <td>
+                                    <!-- Modal to be used to edit a product -->
+                                    <button class="btn_edit" style="color: white; background-color: rgb(120, 146, 158);">Edit</button>
+                                </td>
+                                <td>
+                                    <button class="btn_delete" style="background-color: rgb(241, 40, 40);color: white;">X</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2018/001</td>
+                                <td>Nicanor Korir</td>
+                                <td>NIcque</td>
+                                <td>Supervisor</td>
+                                <td>2018/01/01</td>
+                                <td>
+                                        <!-- Modal to be used to edit a product -->
+                                        <button class="btn_edit" style="color: white; background-color: rgb(120, 146, 158);">Edit</button>
+                                    </td>
+                                    <td>
+                                        <button class="btn_delete" style="background-color: rgb(241, 40, 40);color: white;">X</button>
+                                    </td>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div> 
+        <div class="footer">
+            &copy; 2018 Store Manager
+        </div>
+    </div>
+     <!-- javascript modal pop up trigger event -->
+
+     <script>
+            // Get the modal
+            var modal = document.getElementById('myModal');
+    
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+    
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+    
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+    
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+    
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+</body>
+</html>
