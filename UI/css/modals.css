@@ -48,6 +48,10 @@
     padding: 8px;
     margin-bottom: 10px;
 }
+.modal-body select {
+    padding: 8px;
+    background-color: white;
+}
 .modal select {
     padding: 8px;
     margin-bottom: 4px;

@@ -85,80 +85,29 @@
                 <br><br>
 
                 <div class="products_category_wrapper">
-                    <div class="sale_records_table">
-                        <table>
-                            <tr>
-                                <th>Employee No.:</th>
-                                <th>Full Names</th>
-                                <th>Username</th>
-                                <th>Role</th>
-                                <th>Employement Date</th>
-                                <th>Action</th>
-                                <th></th>
-                            </tr>
-                            <tr>
-                                <td>2018/001</td>
-                                <td>Nicanor Korir</td>
-                                <td>NIcque</td>
-                                <td>Supervisor</td>
-                                <td>2018/01/01</td>
-                                <td>
-                                        <!-- Modal to be used to edit a product -->
-                                        <a href="edit_attendant.html">
-                                            <button class="btn_edit" style="color: white; background-color: rgb(120, 146, 158);">Edit</button>
-                                        </a>
-                                         </td>
-                                    <td>
-                                        <button class="btn_delete" style="background-color: rgb(241, 40, 40);color: white;">X</button>
-                                    </td>
-                            </tr>
-                            <tr>
-                                <td>2018/001</td>
-                                <td>Nicanor Korir</td>
-                                <td>NIcque</td>
-                                <td>Supervisor</td>
-                                <td>2018/01/01</td>
-                                <td>
-                                    <!-- Modal to be used to edit a product -->
-                                    <a href="edit_attendant.html">
-                                            <button class="btn_edit" style="color: white; background-color: rgb(120, 146, 158);">Edit</button>
-                                        </a></td>
-                                <td>
-                                    <button class="btn_delete" style="background-color: rgb(241, 40, 40);color: white;">X</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2018/001</td>
-                                <td>Nicanor Korir</td>
-                                <td>NIcque</td>
-                                <td>Supervisor</td>
-                                <td>2018/01/01</td>
-                                <td>
-                                    <!-- Modal to be used to edit a product -->
-                                    <a href="edit_attendant.html">
-                                            <button class="btn_edit" style="color: white; background-color: rgb(120, 146, 158);">Edit</button>
-                                        </a></td>
-                                <td>
-                                    <button class="btn_delete" style="background-color: rgb(241, 40, 40);color: white;">X</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2018/001</td>
-                                <td>Nicanor Korir</td>
-                                <td>NIcque</td>
-                                <td>Supervisor</td>
-                                <td>2018/01/01</td>
-                                <td>
-                                        <!-- Modal to be used to edit a product -->
-                                        <a href="edit_attendant.html">
-                                                <button class="btn_edit" style="color: white; background-color: rgb(120, 146, 158);">Edit</button>
-                                            </a></td>
-                                    <td>
-                                        <button class="btn_delete" style="background-color: rgb(241, 40, 40);color: white;">X</button>
-                                    </td>
-                                </td>
-                            </tr>
-                        </table>
+                    <div class="edit_product">
+                            <div class="modal-body">
+                            <form action="#" method="POST" enctype="multipart/form-data">
+                                <label for="productTag">Employee No.</label>
+                                <br>
+                                <input type="text" name="employee_no" value="2018/001" size="30">
+                                <br>
+                                <label for="name">Attendant Name</label>
+                                <br>
+                                <input type="text" name="attendant_name" value="Nicanor Korir"  size="30">
+                                <br>
+                                <label for="desc">Username</label><br>
+                                <input type="text" name="username"  size="30" value="Nicque">
+                                <br>
+                                <label for="quantity">Role</label><br>
+                                <input type="text" name="Role" value="Supervisor"  size="30">
+                                <br>
+                                <label for="Employement Date">Employement Date</label>
+                                <br><input type="text" name="Employement Date" value="2018/03/11"  size="30"> 
+                                <br><br>
+                                <input type="submit" name="Edit Attendant"  class="btn_edit" value="Edit Attendant">
+                            </form>
+                        </div>
                     </div>
                 </div>
 
