@@ -7,7 +7,7 @@ Store Manager is a web application that helps store owners manage sales and prod
 `cd Store-Manager`
 
 # Website
-https://nicanor008.github.io/Store-Manager/index.html
+https://nicanor008.github.io/Store-Manager/UI/index.html
 
 ## Project Management
 I used pivotal tracker to manage this project. Here is a link
