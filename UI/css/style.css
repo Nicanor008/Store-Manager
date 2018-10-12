@@ -1,32 +1,57 @@
 /* Media queries for  screen size rendering*/
-@media (min-width: 200px){
+@media screen and (max-width: 200px){
     .login{
         margin-top: 40%;
         width: 90%;
     }
+    .main_body{
+        width: 100%;
+        margin-left: 2%;
+        margin-top: 22%;
+    }
 }
-@media (min-width: 400px){
+@media screen and (max-width: 400px){
     .login{
         margin-top: 20%;
         width: 90%;
     }
+    .main_body{
+        width: 95%;
+        margin-left: 3%;
+        margin-top: 18%;
+    }
 }
-@media (min-width: 700px){
+@media screen and (max-width: 700px){
     .login{
         margin-top: 10%;
         width: 70%;
     }
+    .main_body{
+        width: 85%;
+        margin-left: 6%;
+        margin-top: 12%;
+    }
 }
-@media (min-width: 1000px){
+@media screen and (max-width: 1000px){
     .login{
         margin-top: 10%;
         width: 45%;
     }
+    .main_body{
+        width: 85%;
+        margin-left: 8%;
+        margin-top: 7%;
+    }
 }
-@media (min-width: 1400px){
+@media screen and (max-width: 1400px){
     .login{
         margin-top: 10%;
         width: 50%;
+    }
+    .body_wrapper{
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 4%;
     }
 }
 
@@ -158,13 +183,6 @@
 }
 .login a:hover{
     color: rgb(210, 220, 228);
-}
-
-/* body wrapper */
-.body_wrapper{
-    width: 80%;
-    margin-left: 10%;
-    margin-top: 4%;
 }
 .search_bar{
     width: 100%;
@@ -326,14 +344,17 @@
     width: 95%;
     align-self: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+    /* border-spacing: 50px; */
 }
 .buyers_cart_table table th {
     text-align: left;
 }
 .buyers_cart_table table td {
-    padding-top: 10px;
+    padding: 20px;
 }
+table tr:nth-child(odd) {
+    background-color: rgb(230, 225, 225);
+ }
 .buyers_cart{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
@@ -352,19 +373,23 @@
     background-color: #ECEFF1;
     padding: 4px;
 }
+/* table responsiveness */
+table, th, td {
+    border-collapse: collapse;
+}
 
 /* Sale records table */
 .sale_records_table table {
     width: 95%;
     align-self: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+    /* border-spacing: 50px; */
 }
 .sale_records_table table th {
     text-align: left;
 }
 .sale_records_table table td {
-    padding-top: 10px;
+    padding: 7px;
 }
 .buyers_cart{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
