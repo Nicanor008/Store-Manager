@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Store Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="shortcut icon" href="images/logo.png">
+
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <div class="header_title">
+                <div class="company_title">
+                    Electronics Store Manager
+                </div> 
+            </div>
+        </div>
+        <div class="main_body">
+            <div class="body_wrapper">
+                <center>
+                    <div class="login">
+                    <legend><h2>Login</h2></legend>
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        <label for="username" class="form-label">Username</label><br/>
+                        <input type="text" name="username" placeholder="e.g. Nicque">
+                        <br/><br/>
+                        <label for="password" class="form-label">Password</label><br/>
+                        <input type="password" name="password" placeholder="**********" >
+                        <br><br/>
+                        <a href="forgot_password.html">Forgot Password</a>
+                        <br>
+                        <br/>
+                        <!-- <input type="submit" name="login" value="Login"> -->
+                        </form>
+                        <div class="button_login">
+                            <a href="StoreAttendant/home.html"><button class="store_attendant_button">Attendant Login</button></a>
+                            <a href="StoreOwner/home.html"><button class="store_owner_button">Owner Login</button></a>
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </div> 
+        <div class="footer">
+                &copy; 2018 Store Manager
+        </div>
+    </div>
+</body>
+</html>
