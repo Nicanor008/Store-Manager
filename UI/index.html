@@ -26,22 +26,18 @@
                 <center>
                     <div class="login">
                     <legend><h2>Login</h2></legend>
-                    <form action="" method="POST" enctype="multipart/form-data">
-                        <label for="username" class="form-label">Username</label><br/>
-                        <input type="text" name="username" placeholder="e.g. Nicque">
+                    <form id="formLogin">
+                        <label for="email" class="form-label">Email</label><br/>
+                        <input type="email" name="email" id="user_email" placeholder="e.g. nic123@example.com">
                         <br/><br/>
                         <label for="password" class="form-label">Password</label><br/>
-                        <input type="password" name="password" placeholder="**********" >
+                        <input type="password" name="password" id="user_password" placeholder="**********" >
                         <br><br/>
                         <a href="forgot_password.html">Forgot Password</a>
                         <br>
                         <br/>
-                        <!-- <input type="submit" name="login" value="Login"> -->
+                        <input type="submit" name="login" value="Login" class="button_login">
                         </form>
-                        <div class="button_login">
-                            <a href="StoreAttendant/home.html"><button class="store_attendant_button">Attendant Login</button></a>
-                            <a href="StoreOwner/home.html"><button class="store_owner_button">Owner Login</button></a>
-                        </div>
                     </div>
                 </center>
             </div>
@@ -50,5 +46,8 @@
                 &copy; 2018 Store Manager
         </div>
     </div>
+
+    <script src="js/login.js"></script>
+
 </body>
 </html>
