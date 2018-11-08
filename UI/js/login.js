@@ -1,14 +1,6 @@
 document.getElementById('formLogin').addEventListener('submit', formLogin);
 
-function setToken(res){
-    localStorage.setItem("token", res.body.access_token)
-}
-
-function getToken(){
-    return localStorage.getItem('token')
-}
-
-function login_user(e) {
+function formLogin(e) {
     e.preventDefault();
     let url = 'https://nick-storemanager.herokuapp.com/auth/login';
 
@@ -19,12 +11,21 @@ function login_user(e) {
         method:'POST',
         headers:{
             'Accept':'application/json',
-            'Content-type':'application/json'
+            'Content-type':'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Origin': '<origin> | *',
+            mode: 'no-cors',
+            'Access-Control-Allow-Credentials':'true'
         },
         body:JSON.stringify({email:email, password:password}),
     })
-    .then(res => res.json())
-    
-    .then((result) => console.log("result"))
-
+    .then(res =>  res.json().then(data => ({status: res.status, body: data})))
+    .then((result) => {
+        if(result.status == 200){
+            window.location.href = 'StoreOwner/home.html'
+        }
+        else{
+            document.getElementById('error-display').innerHTML = "Wrong Login Details";
+        }
+    })
 }
