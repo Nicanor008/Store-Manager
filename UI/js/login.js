@@ -19,12 +19,12 @@ function formLogin(e) {
         },
         body:JSON.stringify({email:email, password:password}),
     })
-    .then(res =>  res.json().then(data => ({status: res.status, body: data})))
+    .then(result =>  result.json().then(data => ({status: result.status, body: data})))
     .then((result) => {
-        if(result.status == 200){
+        if(result.body.message == 'Login successful'){
+            setToken(result)
             window.location.href = 'StoreOwner/home.html'
-        }
-        else{
+        }else{
             document.getElementById('error-display').innerHTML = "Wrong Login Details";
         }
     })
