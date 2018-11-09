@@ -23,7 +23,7 @@ function formLogin(e) {
     .then((result) => {
         if(result.body.message == 'Login successful'){
             setToken(result)
-            window.location.href = 'StoreOwner/home.html'
+            window.location.href = 'StoreAttendant/home.html'
         }else{
             document.getElementById('error-display').innerHTML = "Wrong Login Details";
         }

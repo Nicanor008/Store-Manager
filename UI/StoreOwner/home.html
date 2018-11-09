@@ -47,7 +47,7 @@
                     <!-- Modal to be used to add products -->
                     <!-- Trigger/Open The Modal -->
                     <button id="myBtn">Add Product</button> 
-
+                    
                     <!-- The Modal -->
                     <div id="myModal" class="modal">
 
@@ -57,6 +57,7 @@
                             <h2>Add New Product</h2>
                         </div>
                             <div class="modal-body">
+
                             <div id="error-display"></div>
                             <div id="success-display"></div>
                                 <br>
@@ -68,9 +69,7 @@
                                     <label for="quantity">Quantity</label><br>
                                     <input type="number" id="quantity" placeholder="1" size="40"><br>
                                     <label for="descr">Product Price</label><br>
-                                    <input type="text" id="product_price" placeholder="e.g. Ksh. 3000" size="40"><br>
-                                    
-                                   
+                                    <input type="text" id="product_price" placeholder="e.g. Ksh. 3000" size="40"><br>                                   
                                 </form> 
                                 <center>
                                     <button class="save"  id="add_products">Add Product</button>
@@ -126,7 +125,6 @@
                 modal.style.display = "none";
             }
         }
-
     </script>
     <script src="../js/admin.js"></script>
 </body>

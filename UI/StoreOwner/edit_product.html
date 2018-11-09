@@ -42,80 +42,27 @@
 
                 <!-- This will help users know where they are currently -->
                 <div class="title_bar">
-                    <h3>Manage Products</h3>
-                    <!-- Modal to be used to add products -->
-                    <!-- Trigger/Open The Modal -->
-                    <button id="myBtn">Add Product</button> 
-
-                    <!-- The Modal -->
-                    <div id="myModal" class="modal">
-
-                    <!-- Modal content -->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h2>Add New Product</h2>
-                        </div>
-                            <div class="modal-body">
-                                <br>
-                                <form action="" method="POST" enctype="application/x-www-form-urlencoded">
-                                    <label for="Product Category">Product Category</label><br>
-                                    <input type="text" name="product_Category" placeholder="e.g. Office Computers" size="65"><br>
-                                    <label for="pr_name">Product Name</label><br>
-                                    <input type="text" name="product_name" placeholder="e.g. HP Spectre " size="65"><br>
-                                    <label for="quantity">Quantity</label><br>
-                                    <input type="number" name="quantity" placeholder="1" size="65"><br>
-                                    <label for="descr">Product Description</label><br>
-                                    <input type="text" name="product_DEscription" placeholder="Brief product description" size="65"><br>
-                                    
-                                   
-                                </form> 
-                                <center>
-                                    <button class="save">Add Product</button>
-                                    <button class="close">Close</button>
-                                </center>
-                            </div>
-                    </div>
-
-                    </div>
+                    <h3>Edit Product</h3>
                 </div>
 
-                <br><br>
+                <br><br><br/><br/>
 
                 <div class="products_category_wrapper">
-                    <div class="edit_product">
+                    <div class="edit_product" id="edit_product">
                             <div class="modal-body">
                                 <!-- edit product form -->
-                            <form action="#" method="POST" enctype="multipart/form-data">
-                                <label for="productTag">Product Tag</label>
-                                <br>
-                                <input type="text" name="product_tag" value="001" size="30">
-                                <br>
-                                <label for="category"  size="30">Product Category</label><br>
-                                <select name="category">
-                                    <option value="1">Laptops</option>
-                                    <option value="2">Office Computers</option>
-                                    <option value="3">Speakers</option>
-                                    <option value="4">Smartphones</option>
-                                    <option value="5">Accessories</option>
-                                    <option value="6">Wearables</option>
-                                    <option value="7">Smart Screens</option>
-                                </select>
-                                <br>
-                                <label for="name">Product Name</label>
-                                <br>
-                                <input type="text" name="product_name" value="HP Spectre Laptop"  size="30">
-                                <br>
-                                <label for="desc">Product Description</label><br>
-                                <input type="text" name="pro_description"  size="30" value="Windows 10 Home 64. 7th Generation Intel Core i5 processor. AMD Radeon RX 460">
-                                <br>
-                                <label for="quantity">Quantity</label><br>
-                                <input type="number" name="quantity" value="2"  size="40">
-                                <br>
-                                <label for="price">Price</label>
-                                <br><input type="number" name="price" value="20000"  size="30"> 
-                                <br><br>
-                                <input type="submit" name="Edit Product"  class="btn_edit" value="Edit Product">
-                            </form>
+                                <form action="" method="POST" enctype="application/x-www-form-urlencoded">
+                                    <label for="Product Category">Product Category</label><br>
+                                    <input type="text" id="product_category" placeholder="e.g. Office Computers" size="40"><br>
+                                    <label for="pr_name">Product Name</label><br>
+                                    <input type="text" id="product_name" placeholder="e.g. HP Spectre " size="40"><br>
+                                    <label for="quantity">Quantity</label><br>
+                                    <input type="number" id="quantity" placeholder="1" size="40"><br>
+                                    <label for="descr">Product Price</label><br>
+                                    <input type="text" id="product_price" placeholder="e.g. Ksh. 3000" size="40"><br>                                   
+                                    <button class="Submit Edit"  id="edit_products">Edit Product</button>
+                                </form> 
+                                    
                         </div>
                     </div>
                 </div>
@@ -126,35 +73,7 @@
             &copy; 2018 Store Manager
         </div>
     </div>
-
-    <!-- javascript modal pop up trigger event -->
-
-    <script>
-        // Get the modal
-        var modal = document.getElementById('myModal');
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks the button, open the modal 
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+    <script src="../js/base.js"></script>
+    <script src="../js/edit_product.js"></script>
 </body>
 </html>

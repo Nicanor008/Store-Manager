@@ -30,7 +30,7 @@
                         <li><a href="home.html">Manage Products</a></li>
                        | <li><a href="attendants.html">Manage Attendants</a></li>
                        | <li class="active"><a href="sale_records.html">Sale Records</a></li>
-                       | <li><a href="../index.html">Logout</a></li>
+                       | <li><a href=""><button id="logout">Logout</button></a></li>
                     </ul>
                 </div>
             </div>
@@ -63,75 +63,8 @@
                         <!-- To cover for the sale records made in total -->
                         <div class="total_records">
                             <!-- <h4>Total Sales</h4> -->
-                            <div class="sale_records_table">
-                                <table><legend>Total Sales</legend>
-                                    <tr>
-                                        <th>Date</th>
-                                        <th>Store Attendants</th>
-                                        <th>Quantity Sold</th>
-                                        <th>Total Amount Sold</th>
-                                    </tr>
-                                    <tr>
-                                        <td>11/12/2017</td>
-                                        <td>Nicque</td>
-                                        <td>4</td>
-                                        <td>120,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>12/11/2018</td>
-                                        <td>ChillySet</td>
-                                        <td>2</td>
-                                        <td>20,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>11/12/2017</td>
-                                        <td>Nicque</td>
-                                        <td>4</td>
-                                        <td>120,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>12/11/2018</td>
-                                        <td>ChillySet</td>
-                                        <td>2</td>
-                                        <td>20,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>11/12/2017</td>
-                                        <td>Nicque</td>
-                                        <td>4</td>
-                                        <td>120,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>12/11/2018</td>
-                                        <td>ChillySet</td>
-                                        <td>2</td>
-                                        <td>20,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>11/12/2017</td>
-                                        <td>Nicque</td>
-                                        <td>4</td>
-                                        <td>120,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>12/11/2018</td>
-                                        <td>ChillySet</td>
-                                        <td>2</td>
-                                        <td>20,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>11/12/2017</td>
-                                        <td>Nicque</td>
-                                        <td>4</td>
-                                        <td>120,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>12/11/2018</td>
-                                        <td>ChillySet</td>
-                                        <td>2</td>
-                                        <td>20,000</td>
-                                    </tr>
-                                </table>
+                            <div class="sale_records_table" id="sale_records_table">
+                                <table id="sales_table"></table>
                             </div>
                         </div>
                    </div>
@@ -144,5 +77,7 @@
             &copy; 2018 Store Manager
         </div>
     </div>
+    <script src="../js/base.js"></script>
+    <script src="../js/attendant.js"></script>
 </body>
 </html>
