@@ -1,14 +1,13 @@
-
-// headers = (dict(Authorization = 'Bearer ' + self.token_admin)),
+token = getToken()
 
 window.onload = function get_products(){
-    token = getToken()
 
     fetch('https://nick-storemanager.herokuapp.com/products',{
         method:'GET',
         headers: {
             'Accept': 'application/json',
             'Content-type':'application/json',
+            'Access-Control-Allow-Origin': '*',
             'Authorization':'Bearer ' + token
         }
     })
@@ -42,10 +41,37 @@ window.onload = function get_products(){
 }   
 
 // add a product
-document.getElementById('myBtn').addEventListener('click', post_product);
+document.getElementById('add_products').addEventListener('click', post_product);
 
 function post_product(e) {
     e.preventDefault();
+    
+    let product_name = document.getElementById('product_name').value;
+    let product_category = document.getElementById('product_category').value;
+    let quantity = document.getElementById('quantity').value;
+    let product_price = document.getElementById('product_price').value;
 
+    fetch('https://nick-storemanager.herokuapp.com/products',{
+        method:'POST',
+        headers:{
+            'Accept':'application/json',
+            'Content-type':'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Authorization':'Bearer ' + token
+        },
+        body:JSON.stringify({product_name:product_name, product_category:product_category, product_quantity:quantity, price:product_price})
+    })
+    .then(result =>  result.json().then(data => ({status: result.status, body: data})))
+    .then(result => {
+        if(result.status == 201){
+            document.getElementById('success-display').innerHTML = "201 - added";
+        }else if(result.status == 404){
+            document.getElementById('error-display').innerHTML = "404 - all fields are required";
+        }else if(result.status == 409){
+            document.getElementById('error-display').innerHTML = "409 - duplicate fields";
+        }else{
+            document.getElementById('error-display').innerHTML = "something wrong happened";
+        }
+    })
     
 }

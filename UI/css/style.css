@@ -474,7 +474,14 @@ table, th, td {
     font-size: 27px;
     color: #546E7A;
 }
-
+#error-display{
+    padding: 7px;
+    background-color: #ffcdd2;
+}
+#success-display{
+    padding: 7px;
+    background-color: #69F0AE;
+}
 /* main footer of the page */
 .footer { 
     grid-area: footer;
@@ -489,7 +496,5 @@ table, th, td {
     font-size: 20px;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
 }
-
 /* end of css file */
