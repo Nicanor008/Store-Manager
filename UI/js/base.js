@@ -7,7 +7,3 @@ function getToken(){
     return token;
 }
 
-function getRole(){
-    token = localStorage.getItem('role');
-    return token;
-}

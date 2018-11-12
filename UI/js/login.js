@@ -22,10 +22,14 @@ function formLogin(e) {
     })
     .then(result =>  result.json().then(data => ({status: result.status, body: data})))
     .then((result) => {
-        if(result.body.message == 'Login successful'){
+        console.log(result.status);
+        if(result.body.role == 'admin'){
             setToken(result)
             window.location.href = 'StoreOwner/home.html'
-        }else if(result.body.message == "Invalid Email address"){
+        }else if(result.status == 404){
+            document.getElementById('error-display').innerHTML = result.body.message;
+        }
+        else if(result.status == 400){
             document.getElementById('error-display').innerHTML = result.body.message;
         }
         else{
@@ -59,7 +63,7 @@ function attendant_Login(e) {
     })
     .then(result =>  result.json().then(data => ({status: result.status, body: data})))
     .then((result) => {
-        if(result.body.message == 'Login successful'){
+        if(result.body.role == 'attendant'){
             setToken(result)
             window.location.href = 'StoreAttendant/products.html'
         }else if(result.body.message == "Invalid Email address"){

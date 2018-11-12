@@ -27,7 +27,7 @@ window.onload = function get_products(){
                         '<button style="float:left;background-color: white;padding: 4px;">Ksh. '+price+'</button>'+
                         '<button style="float:right;background-color: white;padding: 4px;"><b>'+quantity+'</b> Available</button>'+
                             '<br><br>'+
-                            '<a href="#" class="add_to_cart_btn">'+
+                            '<a href="single_product.html" class="add_to_cart_btn">'+
                                 '<button onclick="show_product('+id+')" id="myBtn">View</button>'+
                             '</a>'+
                             '<button class="add_to_cart_buttons" onclick="post_sale('+price+','+quantity+')">Post <b>1</b> Sale</button>'+
@@ -37,7 +37,7 @@ window.onload = function get_products(){
     })
 } 
 
-// single product display
+// get product display
 function show_product(id) {
     console.log(id);
     url = 'https://nick-storemanager.herokuapp.com/products/'.concat(id);
@@ -53,12 +53,23 @@ function show_product(id) {
     })
     .then(result =>  result.json())
     .then(result => {
-        document.getElementById('name_here').innerHTML = result;
+        localStorage.setItem('product_name', result.message.product_price)
     })
 }
 
+// store a single product in localstorage
+function store_product(result){
+    return localStorage.setItem('product_name', result.message.product_name)
+}
+
+window.onload = function display_product(){
+    pr = localStorage.getItem('product_name')
+    // display_product
+    document.getElementById('display_product').innerHTML = "<b>Product Name  </b>:" + pr;
+    console.log(pr)
+}
+
 function post_sale(price, quantity) {
-        // e.preventDefault();
         console.log(price, quantity, product_name);
     
         fetch('https://nick-storemanager.herokuapp.com/sales',{
@@ -73,11 +84,10 @@ function post_sale(price, quantity) {
         })
         .then(result =>  result.json().then(data => ({status: result.status, body: data})))
         .then(result => {
-            if(result){
-                console.log(result);
-            }else{
-                console.log("failed")
-            }
+            console.log(result)
+            product = document.getElementById('display_product');
+            pr = result.body;
+            product.innerHTML=pr;
         })
 }
 
