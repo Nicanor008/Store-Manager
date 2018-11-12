@@ -23,10 +23,10 @@
                 </div> 
                 <div class="menu">
                     <ul>
-                        <li><a href="home.html">Products</a></li>
+                        <li><a href="products.html">Products</a></li>
                        | <li><a href="sale_records.html">Sale Records</a></li>
                        | <li><a href="my_profile.html">My Profile</a></li>
-                       | <li><a href="../index.html">Logout</a></li>
+                       | <li><a href=""><button onclick="logout()">Logout</button></a></li>
                     </ul>
                 </div>
             </div>
@@ -74,11 +74,13 @@
                                 </div>
 
                                 <!-- single product description -->
-                                <div class="single_product_description">
-                                    <h2>Product Description</h2>
+                                <div class="single_product_description" id="display_product">
+                                    <button onclick="display_product()">Click Me</button>
+                                    <br><br><br>
+                                    <!-- <h2>Product Description</h2>
                                     <b>Product Category: </b> Office Computers
                                     <br><br>
-                                    <b>Product Name: </b> HP Pavilion Desktops
+                                    <b id="name_here">Product Name: </b> 
                                     <br><br>
                                     <b>Quantity: </b> 12 Available
                                     <br><br>
@@ -90,7 +92,7 @@
                                         <li>7th Generation Intel Core i5 processor</li>
                                         <li>AMD Radeon RX 460 (2 GB GDDR5 dedicated)</li>
                                         <li>8 GB memory; 1 TB HDD storage</li>
-                                    </ul>
+                                    </ul> -->
                                     <button onclick="AddToCart()" class="add_to_cart_button">Add To Cart</button>
                                 </div>
                         </div>
@@ -104,5 +106,8 @@
             &copy; 2018 Store Manager
         </div>
     </div>
+    <script src="../js/base.js"></script>
+    <script src="../js/attendant.js"></script>
+    <script src="../js/logout.js"></script>
 </body>
 </html>

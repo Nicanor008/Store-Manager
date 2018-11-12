@@ -32,7 +32,7 @@
                         <li class="active"><a href="home.html">Manage Products</a></li>
                        | <li><a href="attendants.html">Manage Attendants</a></li>
                        | <li><a href="sale_records.html">Sale Records</a></li>
-                       | <li><a href="../index.html">Logout</a></li>
+                       | <li><a href=""><button onclick="logout()">Logout</button></a></li>
                     </ul>
                 </div>
             </div>
@@ -46,7 +46,10 @@
                     <!-- Modal to be used to add products -->
                     <!-- Trigger/Open The Modal -->
                     <button id="myBtn">Add Product</button> 
+                    <br>
 
+                    <div id="error-display"></div>
+                    <div id="success-display"></div>
                     <!-- The Modal -->
                     <div id="myModal" class="modal">
 
@@ -59,18 +62,16 @@
                                 <br>
                                 <form action="" method="POST" enctype="application/x-www-form-urlencoded">
                                     <label for="Product Category">Product Category</label><br>
-                                    <input type="text" name="product_Category" placeholder="e.g. Office Computers" size="65"><br>
+                                    <input type="text" id="product_category" placeholder="e.g. Office Computers" size="40"><br>
                                     <label for="pr_name">Product Name</label><br>
-                                    <input type="text" name="product_name" placeholder="e.g. HP Spectre " size="65"><br>
+                                    <input type="text" id="product_name" placeholder="e.g. HP Spectre " size="40"><br>
                                     <label for="quantity">Quantity</label><br>
-                                    <input type="number" name="quantity" placeholder="1" size="65"><br>
-                                    <label for="descr">Product Description</label><br>
-                                    <input type="text" name="product_DEscription" placeholder="Brief product description" size="65"><br>
-                                    
-                                   
+                                    <input type="number" id="quantity" placeholder="1" size="40"><br>
+                                    <label for="descr">Product Price</label><br>
+                                    <input type="text" id="product_price" placeholder="e.g. Ksh. 3000" size="40"><br>                                   
                                 </form> 
                                 <center>
-                                    <button class="save">Add Product</button>
+                                    <button class="save"  id="add_products">Add Product</button>
                                     <button class="close">Close</button>
                                 </center>
                             </div>
@@ -79,135 +80,13 @@
                     </div>
                 </div>
 
-                <br><br>
+                <br>
 
                 <div class="products_category_wrapper">
-                    <div class="sale_records_table">
-                        <table>
-                            <tr>
-                                <th>Product Tag</th>
-                                <th>Product Category</th>
-                                <th>Product Name</th>
-                                <th>Product Description</th>
-                                <th>Quantity</th>
-                                <th>Price</th>
-                                <th>Action</th>
-                                <th></th>
-                            </tr>
-                            <tr>
-                                <td>0001</td>
-                                <td>Laptops</td>
-                                <td>HP Spectre Laptop</td>
-                                <td>Windows 10 Home 64. 7th Generation Intel Core i5 processor. AMD Radeon RX 460
-                                       
-                                </td>
-                                <td>10</td>
-                                <td>20,000</td>
-                                <td>
-                                    <!-- Modal to be used to edit a product -->
-                                    <a href="edit_product.html">
-                                        <button class="btn_edit">Edit</button>
-                                    </a>
-                                </td>
-                                <td>
-                                    <button class="btn_delete">X</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>0001</td>
-                                <td>Laptops</td>
-                                <td>HP Spectre Laptop</td>
-                                <td>Windows 10 Home 64. 7th Generation Intel Core i5 processor. AMD Radeon RX 460
-                                       
-                                </td>
-                                <td>10</td>
-                                <td>20,000</td>
-                                <td>
-                                    <!-- Modal to be used to edit a product -->
-                                    <button class="btn_edit">Edit</button>
-                                </td>
-                                <td>
-                                    <button class="btn_delete">X</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>0001</td>
-                                <td>Laptops</td>
-                                <td>HP Spectre Laptop</td>
-                                <td>Windows 10 Home 64. 7th Generation Intel Core i5 processor. AMD Radeon RX 460
-                                       
-                                </td>
-                                <td>10</td>
-                                <td>20,000</td>
-                                <td>
-                                    <!-- Modal to be used to edit a product -->
-                                    <a href="edit_product.html">
-                                        <button class="btn_edit">Edit</button>
-                                    </a>
-                                </td>
-                                <td>
-                                    <button class="btn_delete">X</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>0001</td>
-                                <td>Laptops</td>
-                                <td>HP Spectre Laptop</td>
-                                <td>Windows 10 Home 64. 7th Generation Intel Core i5 processor. AMD Radeon RX 460
-                                       
-                                </td>
-                                <td>10</td>
-                                <td>20,000</td>
-                                <td>
-                                    <!-- Modal to be used to edit a product -->
-                                    <a href="edit_product.html">
-                                        <button class="btn_edit">Edit</button>
-                                    </a>
-                                </td>
-                                <td>
-                                    <button class="btn_delete">X</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>0001</td>
-                                <td>Laptops</td>
-                                <td>HP Spectre Laptop</td>
-                                <td>Windows 10 Home 64. 7th Generation Intel Core i5 processor. AMD Radeon RX 460
-                                       
-                                </td>
-                                <td>10</td>
-                                <td>20,000</td>
-                                <td>
-                                    <!-- Modal to be used to edit a product -->
-                                    <a href="edit_product.html">
-                                        <button class="btn_edit">Edit</button>
-                                    </a>
-                                </td>
-                                <td>
-                                    <button class="btn_delete">X</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>0001</td>
-                                <td>Laptops</td>
-                                <td>HP Spectre Laptop</td>
-                                <td>Windows 10 Home 64. 7th Generation Intel Core i5 processor. AMD Radeon RX 460
-                                       
-                                </td>
-                                <td>10</td>
-                                <td>20,000</td>
-                                <td>
-                                    <!-- Modal to be used to edit a product -->
-                                    <a href="edit_product.html">
-                                        <button class="btn_edit">Edit</button>
-                                    </a>
-                                </td>
-                                <td>
-                                    <button class="btn_delete">X</button>
-                                </td>
-                            </tr>
-                        </table>
+                    <div class="sale_records_table" id="products_data">
+                        <table id="products_table"></table>
                     </div>
+                 </div>
                 </div>
 
             </div>
@@ -246,5 +125,8 @@
             }
         }
     </script>
+    <script src="../js/base.js"></script>
+    <script src="../js/admin.js"></script>
+    <script src="../js/logout.js"></script>
 </body>
 </html>
