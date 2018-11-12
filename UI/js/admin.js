@@ -26,18 +26,69 @@ window.onload = function get_products(){
             `
             products_table.innerHTML = th
             products.forEach(product => { 
+                id = product.productid;
+                product_name = product.product_name;
+                price = product.price;
+                quantity = product.product_quantity;
+
                 products_table.innerHTML += '<tr>'+
-                    '<td>'+product.productid+'</td>'+
-                    '<td>'+product.product_name+'</td>'+
-                    '<td>'+product.price+'</td>'+
-                    '<td>'+product.product_quantity+'</td>'+
-                    '<td><a href="edit_product.html"><button id="edit_product">Edit</button></a>'+
+                    '<td><input type="text" id="product_id" value="'+id+'" readonly></input></td>'+
+                    '<td><input type="text" id="product_name" value="'+product_name+'"></input></td>'+
+                    '<td><input type="number" name="price" class="price"  value="'+price+'"></input></td>'+
+                    '<td><input type="number" id="quantity" value="'+quantity+'"></input></td>'+
+                    '<td><button onclick="edit_product('+id+')">Edit</button>'+
                     '&nbsp;&nbsp;'+
-                    '<button id="delete_product">Delete</button></td>'+
+                    '<button onclick="delete_product('+id+')">Delete</button></td>'+
                     '</tr>';
             })
     })
 }   
+
+// delete product
+function delete_product(id) {
+    let url = 'https://nick-storemanager.herokuapp.com/products/'.concat(id);
+
+    fetch(url ,{
+        method:'DELETE',
+        headers:{
+            'Content-type':'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Authorization':'Bearer ' + token
+        }})
+    .then(result =>  result.json())
+    .then(result => {
+        window.location.reload();
+    })
+}
+
+// Edit a product
+function edit_product(id) {
+    let price = document.getElementsByName('price').value
+    console.log(price)
+    let url = 'https://nick-storemanager.herokuapp.com/products/'.concat(id)
+
+    fetch(url ,{
+        method:'PUT',
+        headers:{
+            'Accept':'application/json',
+            'Content-type':'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Authorization':'Bearer ' + token
+        },
+        body:JSON.stringify({product_quantity:quantity, product_name:product_name, price:price, product_category:"product"})
+    })
+    .then(result =>  result.json().then(data => ({status: result.status, body: data})))
+    .then(result => {
+        console.log(result) 
+        if(result.status == 201){
+            document.getElementById('success-display').innerHTML = result.body.message;
+            // window.location.reload();
+        }else{
+            document.getElementById('error-display').innerHTML = result.body.message;
+        }
+    })
+}
+
 
 // add a product
 let add = document.getElementById('add_products');
@@ -65,11 +116,12 @@ function post_product(e) {
     .then(result =>  result.json().then(data => ({status: result.status, body: data})))
     .then(result => {
         if(result.status == 201){
-            document.getElementById('success-display').innerHTML = "201 - added";
+            document.getElementById('success-display').innerHTML = result.body.message;
+            window.location.reload();
         }else if(result.status == 404){
-            document.getElementById('error-display').innerHTML = "404 - all fields are required";
+            document.getElementById('error-display').innerHTML = result.body.message;;
         }else if(result.status == 409){
-            document.getElementById('error-display').innerHTML = "409 - duplicate fields";
+            document.getElementById('error-display').innerHTML = result.body.message;;
         }else{
             document.getElementById('error-display').innerHTML = "something wrong happened";
         }
@@ -77,8 +129,7 @@ function post_product(e) {
 }
 
 // add a user
-document.getElementById('add_user').addEventListener('click', post_user);
-
+add_user = document.getElementById('add_user').addEventListener('click', post_user);
 function post_user(e) {
     e.preventDefault();
     
@@ -113,8 +164,8 @@ function post_user(e) {
     })
 }
 
+// get all users
 window.onload = function get_users(){
-
     fetch('https://nick-storemanager.herokuapp.com/auth/users',{
         method:'GET',
         headers: {

@@ -26,10 +26,10 @@
                 </div> 
                 <div class="menu">
                     <ul>
-                        <li><a href="home.html">Products</a></li>
+                        <li><a href="products.html">Products</a></li>
                        | <li class="active"><a href="sale_records.html">Sale Records</a></li>
                        | <li><a href="my_profile.html">My Profile</a></li>
-                       | <li><a href="" id="logout">Logout</a></li>
+                       | <li><a href=""><button onclick="logout()">Logout</button></a></li>
                     </ul>
                 </div>
             </div>
@@ -61,8 +61,6 @@
                                     <div id="success-display"></div>
                                         <br>
                                         <form action="" method="POST" enctype="application/x-www-form-urlencoded">
-                                            <label for="Product Category">Product Category</label><br>
-                                            <input type="text" id="product_category" placeholder="e.g. Office Computers" size="40"><br>
                                             <label for="pr_name">Product Name</label><br>
                                             <input type="text" id="product_name" placeholder="e.g. HP Spectre " size="40"><br>
                                             <label for="quantity">Quantity</label><br>
@@ -71,7 +69,7 @@
                                             <input type="text" id="product_price" placeholder="e.g. Ksh. 3000" size="40"><br>                                   
                                         </form> 
                                         <center>
-                                            <button class="save"  id="post_sale">Post Sale</button>
+                                            <button class="save"  onclick="add_sale()">Post Sale</button>
                                             <button class="close">Close</button>
                                         </center>
                                     </div>
@@ -140,5 +138,6 @@
     </script>
     <script src="../js/base.js"></script>
     <script src="../js/attendant.js"></script>
+    <script src="../js/logout.js"></script>
 </body>
 </html>

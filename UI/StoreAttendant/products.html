@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Products | Store Manager</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/modals.css">
     <link rel="shortcut icon" href="../images/logo.png">
     
     <!-- font awesome link -->
@@ -25,10 +26,10 @@
                 </div> 
                 <div class="menu">
                     <ul>
-                        <li><a href="home.html">Products</a></li>
+                        <li><a href="products.html">Products</a></li>
                        |<li><a href="sale_records.html">Sale Records</a></li>
                        | <li><a href="my_profile.html">My Profile</a></li>
-                       | <li><a href="../index.html">Logout</a></li>
+                       | <li><a href=""><button onclick="logout()">Logout</button></a></li>
                     </ul>
                 </div>
             </div>
@@ -38,14 +39,7 @@
 
                 <!-- Navigation bar for searching products and a cart button -->
                 <div class="search_bar">
-
-                    <!-- title of the current page will be displayed here -->
-                    <h2>
-                        <a href="home.html">
-                            <i class="fas fa-arrow-left"></i>
-                        </a>
-                    </h2>
-                    <h3>Laptop Categories</h3>
+                    <h3>Laptops</h3>
 
                     <!-- A button to search for products -->
                     <div class="search_form">
@@ -70,81 +64,40 @@
                 <div class="products_category_wrapper">
                     <!-- first product row -->
                     <div class="products_category_row">
-                        <div class="single_product_category">
-                                <div class="product_image">
-                                    <img src="../images/laptop1.jpeg" alt="laptops" width="210" height="137">
-                                </div>
 
-                                <!-- product description here -->
-                                <div class="product_category_descr">
-                                    Lenovo Thinkpad
-                                    <br>
-                                    <button style="float:left;background-color: white;padding: 4px;">Ksh. 20,000</button>
-                                    <button style="float:right;background-color: white;padding: 4px;">10 Available</button>
-                                    <br><br>
-                                    <a href="single_product.html" class="add_to_cart_btn">
-                                        <button>View</button>
-                                    </a>
-                                    <button class="add_to_cart_buttons" onclick="AddToCart()">Add To Cart</button>
+                        <div id="error-display"></div>
+                        <div id="success-display"></div>
+
+                        <div id="products_table"></div>
+
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+    
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2>Add New Product</h2>
+                            </div>
+                                <div class="modal-body">
+                                <br>
+                                <form action="" method="POST" enctype="application/x-www-form-urlencoded">
+                                    <label for="Product Category">Product Category</label><br>
+                                    <input type="text" id="product_category" placeholder="e.g. Office Computers" size="40"><br>
+                                    <label for="pr_name">Product Name</label><br>
+                                    <input type="text" id="product_name" placeholder="e.g. HP Spectre " size="40"><br>
+                                    <label for="quantity">Quantity</label><br>
+                                    <input type="number" id="quantity" placeholder="1" size="40"><br>
+                                    <label for="descr">Product Price</label><br>
+                                    <input type="text" id="product_price" placeholder="e.g. Ksh. 3000" size="40"><br>                                   
+                                </form> 
+                                <center>
+                                    <button class="save"  id="add_products">Add Product</button>
+                                    <button class="close">Close</button>
+                                </center>
                                 </div>
                         </div>
-                        <div class="single_product_category">
-                                <div class="product_image">
-                                    <img src="../images/laptop4.jpeg" alt="Desktop computers" width="200" height="137">
-                                </div>
-
-                                <!-- product description here -->
-                                <div class="product_category_descr">
-                                    HP Spectre Thin Laptop
-                                    <br><button style="float:left;background-color: white;padding: 4px;">Ksh. 20,000</button>
-                                    <button style="float:right;background-color: white;padding: 4px;">10 Available</button>
-                                    <br>
-                                    <br>
-                                    <a href="single_product.html" class="add_to_cart_btn">
-                                        <button>View</button>
-                                    </a>
-                                    <button class="add_to_cart_buttons" onclick="AddToCart()">Add To Cart</button>
-                                </div>
-                        </div>
-                        <div class="single_product_category">
-                                <div class="product_image">
-                                    <img src="../images/laptop3.jpeg" alt="Music Speakers" width="140" height="137">
-                                </div>
-
-                                <!-- product description here -->
-                                <div class="product_category_descr">
-                                    Lenovo Thinkpad
-                                    <br>
-                                    <button style="float:left;background-color: white;padding: 4px;">Ksh. 20,000</button>
-                                    <button style="float:right;background-color: white;padding: 4px;">10 Available</button>
-                                    <br>
-                                    <br>
-                                    <a href="single_product.html" class="add_to_cart_btn">
-                                        <button>View</button>
-                                    </a>
-                                    <button class="add_to_cart_buttons" onclick="AddToCart()">Add To Cart</button>
-                                </div>
-                        </div>
-
-                        <div class="single_product_category">
-                                <div class="product_image">
-                                    <img src="../images/laptop2.jpeg" alt="Electronics accessories" width="150" height="137">
-                                </div>
-
-                                <!-- product description here -->
-                                <div class="product_category_descr">
-                                    Lenovo Thinkpad
-                                    <br>
-                                    <button style="float:left;background-color: white;padding: 4px;">Ksh. 20,000</button>
-                                    <button style="float:right;background-color: white;padding: 4px;">10 Available</button>
-                                    <br>
-                                    <br>
-                                    <a href="single_product.html" class="add_to_cart_btn">
-                                        <button>View</button>
-                                    </a>
-                                    <button class="add_to_cart_buttons" onclick="AddToCart()">Add To Cart</button>
-                                </div>
-                        </div>
+    
+                        
                     </div>
                 </div>
             </div>
@@ -153,5 +106,37 @@
             &copy; 2018 Store Manager
         </div>
     </div>
+    <!-- javascript modal pop up trigger event -->
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script src="../js/base.js"></script>
+    <script src="../js/attendant.js"></script>
+    <script src="../js/logout.js"></script>
 </body>
 </html>

@@ -6,3 +6,8 @@ function getToken(){
     token = localStorage.getItem('token');
     return token;
 }
+
+function getRole(){
+    token = localStorage.getItem('role');
+    return token;
+}
