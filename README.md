@@ -21,5 +21,4 @@ Store Manager is a web application that helps store owners manage sales and prod
 * Access the hosted UI [here](https://nicanor008.github.io/Store-Manager/index.html)
 
 ## Project Management
-I used pivotal tracker to manage this project. Here is a link
-https://www.pivotaltracker.com/n/projects/2202865
+I used pivotal tracker to manage this project. [Here is a link](https://www.pivotaltracker.com/n/projects/2202865)
