@@ -1,6 +1,14 @@
 # Store-Manager
 Store Manager is a web application that helps store owners manage sales and product inventory records. This application is meant for use in a single store.
 
+## User's Data
+**Default Admin Login Details**(Store Owner)
+```
+Email - nickip@gmail.com
+Password - nickip
+```
+Add new users and login them
+
 ## Key Functionalities
 * Store Manager and Store Attendant login separately.
 * Store Owner can:
