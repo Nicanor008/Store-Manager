@@ -39,9 +39,7 @@ window.onload = function get_products(){
 
 // get product display
 function show_product(id) {
-    console.log(id);
     url = 'https://nick-storemanager.herokuapp.com/products/'.concat(id);
-    console.log(url)
     fetch(url,{
         method:'GET',
         headers:{
@@ -53,20 +51,13 @@ function show_product(id) {
     })
     .then(result =>  result.json())
     .then(result => {
-        localStorage.setItem('product_name', result.message.product_price)
+        localStorage.setItem('product_name', result)
     })
 }
 
-// store a single product in localstorage
-function store_product(result){
-    return localStorage.setItem('product_name', result.message.product_name)
-}
-
-window.onload = function display_product(){
+function display_product(){
     pr = localStorage.getItem('product_name')
-    // display_product
     document.getElementById('display_product').innerHTML = "<b>Product Name  </b>:" + pr;
-    console.log(pr)
 }
 
 function post_sale(price, quantity) {
