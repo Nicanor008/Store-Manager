@@ -30,13 +30,38 @@ window.onload = function get_products(){
                             '<a href="single_product.html" class="add_to_cart_btn">'+
                                 '<button onclick="show_product('+id+')" id="myBtn">View</button>'+
                             '</a>'+
-                            '<button class="add_to_cart_buttons" onclick="post_sale('+price+','+quantity+')">Post <b>1</b> Sale</button>'+
+                            '<button class="add_to_cart_buttons" onclick="postsales('+quantity+','+price+')">Post <b>1</b> Sale</button>'+
                         '</div>'+
                 '</div>'
             })
     })
 } 
+// onclick="post_sale('+price+','+quantity+')
 
+function postsales(quantity, price){
+    fetch('https://nick-storemanager.herokuapp.com/sales',{
+        method:'POST',
+        headers:{
+            'Accept':'application/json',
+            'Content-type':'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Authorization':'Bearer ' + token
+        },
+        body:JSON.stringify({product_name:product_name, product_quantity:quantity, price:price})
+    })
+    .then(result =>  result.json().then(data => ({status: result.status, body: data})))
+    .then(result => {
+        if(result.status == 201){
+            document.getElementById('success-display').innerHTML = result.body.message;
+        }else if(result.status == 404){
+            document.getElementById('error-display').innerHTML = result.body.message;;
+        }else if(result.status == 409){
+            document.getElementById('error-display').innerHTML = result.body.message;;
+        }else{
+            document.getElementById('error-display').innerHTML = "something wrong happened";
+        }
+    })
+}
 // get product display
 function show_product(id) {
     url = 'https://nick-storemanager.herokuapp.com/products/'.concat(id);
