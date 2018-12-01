@@ -1,0 +1,18 @@
+{
+  "name": "ui",
+  "version": "1.0.0",
+  "description": "Store Manager is a web application that helps store owners manage sales and product inventory records. This application is meant for use in a single store.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-fetch": "^0.3.1",
+    "mocha": "^5.2.0",
+    "request": "^2.88.0",
+    "should": "^13.2.3"
+  }
+}
