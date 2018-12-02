@@ -36,10 +36,6 @@ window.onload = function get_products(){
                             '</div>'+
                     '</div>'
                 }
-                // else{
-                //     document.getElementById('error-display').innerHTML = '<div style="padding:80px;"><center><h1>No Products available</h1></center></div>';
-                //     document.getElementById('success-display').style.display = 'none'
-                // }
             })
     })
 } 
@@ -94,45 +90,6 @@ function display_product(){
     pr = localStorage.getItem('product_name')
     document.getElementById('display_product').innerHTML = "<b>Product Name  </b>:" + pr;
 }
-
-// get sale records
-// window.onload = function get_sales(){
-
-//     fetch('https://nick-storemanager.herokuapp.com/sales',{
-//         method:'GET',
-//         headers: {
-//             'Accept': 'application/json',
-//             'Content-type':'application/json',
-//             'Access-Control-Allow-Origin': '*',
-//             'Authorization':'Bearer ' + token
-//         }
-//     })
-//     .then(response => response.json())
-//     .then((result) => {
-//             let products = result.Sales;
-//             let products_table = document.getElementById('sales_table');
-//             th = `
-//                 <tr>
-//                     <th>Product ID</th>
-//                     <th>Attended by</th>
-//                     <th>Product Name</th>
-//                     <th>Price</th>
-//                     <th>Quantity</th>
-//                 </tr>
-//             `
-//             // sale_records_table
-//             products_table.innerHTML = th
-//             products.forEach(product => { 
-//                 products_table.innerHTML += '<tr>'+
-//                     '<td>'+product.product_id+'</td>'+
-//                     '<td>'+product.attended_by+'</td>'+
-//                     '<td>'+product.product_name+'</td>'+
-//                     '<td>'+product.price+'</td>'+
-//                     '<td>'+product.sold_quantity+'</td>'+
-//                     '</tr>';
-//             })
-//     })
-// }
 
 // add_sale
 document.getElementById('post_sale').addEventListener('click', add_sale);

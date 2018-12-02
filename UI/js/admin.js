@@ -115,6 +115,7 @@ function post_product(e) {
     })
     .then(result =>  result.json().then(data => ({status: result.status, body: data})))
     .then(result => {
+        console.log(result.status)
         if(result.status == 201){
             document.getElementById('success-display').innerHTML = result.body.message;
             window.location.reload();
