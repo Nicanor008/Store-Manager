@@ -11,6 +11,7 @@
 
     <!-- font awesome link -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.8.0/jasmine.min.css">
 </head>
 <body>
     <div class="grid-container">
@@ -40,7 +41,7 @@
                         <br/>
                         <!-- <input type="submit" name="login" value="Login" class="button_login"> -->
                         <button class="store_attendant_button" id="attendant_Login">Attendant Login</button>
-                        <button class="store_owner_button" id="formLogin">Owner Login</button>
+                        <button class="store_owner_button" onclick="formLogin()" id="formLogin">Owner Login</button>
                     </form>
                     </div>
                 </center>
@@ -50,9 +51,12 @@
                 &copy; 2018 Store Manager
         </div>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.8.0/jasmine.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.8.0/jasmine-html.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.8.0/boot.min.js"></script>
     <script src="js/base.js"></script>
     <script src="js/login.js"></script>
+    <script src="spec/test.spec.js"></script>
 
 </body>
 </html>

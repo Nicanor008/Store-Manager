@@ -4,14 +4,20 @@
   "description": "Store Manager is a web application that helps store owners manage sales and product inventory records. This application is meant for use in a single store.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
     "chai": "^4.2.0",
     "chai-fetch": "^0.3.1",
+    "faker": "^4.1.0",
+    "jest": "^23.6.0",
     "mocha": "^5.2.0",
+    "puppeteer": "^1.11.0",
     "request": "^2.88.0",
     "should": "^13.2.3"
   }
